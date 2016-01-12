@@ -18,31 +18,106 @@
     
     <!-- ReminderList references -->
     <link rel="stylesheet" type="text/css" href="css/tasks.css">
+    <link rel="stylesheet" href="themes/aForNightBforDay.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="scripts/JQuery.mobile-1.4.5/jquery.mobile.structure-1.4.5.css" />
     <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="scripts/JQuery.mobile-1.4.5/jquery-2.1.4.js"></script>
+    <script src="scripts/JQuery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/require.js" data-main="js/main.js"></script>
     <link href="css/index.css" rel="stylesheet" />
+    <!-- script to not have to type out all the diff browsers for animations-->
+    <script src="http://www.kirupa.com/js/prefixfree.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Khang's List</h1>
+
+        <!-- Fixed bottom navbar-->
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                   
+                    <a class="navbar-brand" id="brandBlink" href="#">
+                        <img alt="VRaPP" style="max-height: 30px;" src="images/WTH1200X210.png" class="img-responsive center-block" />
+                    </a>
+                </div>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input class="form-control" type="text"
+                                   id="searchTerm" placeholder="Search">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default form-control" type="button">
+                                    Go!
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <div class="container">
+                    <button class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="new-task-button">New Task</button>
+                    
+                    <button class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="save-button">Save</button>
+                    <button class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="cancel-button">Cancel</button>
+                    <button class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="delete-all-button">Delete All</button>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav> <!-- end bottom nav-->
+       
+    <!-- fixed top navbar-->
+     <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #2f3646;">
+            <div class="container-fluid">
+
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a href="#" id="brandTranslate" class="navbar-brand loadedFont">Yolocrew VR App</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="topNavbar">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown-header">Yolo</li>
+                        <li><a href="http://Yolocrew.com">Yolocrew's Website</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Websites <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://Yolocrew.com">Yolocrew's Website</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="http://WildTicketHog.com">WildTicketHog.com</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav> <!-- end of fixed-top navbar -->
     </header>
-
-    <div class="toolbar">
-        <button id="new-task-button">New Task</button>
-        <button id="delete-all-button">Delete All</button>
-    </div>
-
-    <div id="content">
-        <ul id="task-list"></ul>
-
-        <ul id="log-list"></ul>
-    </div>
-
-    <div class="toolbar">
-        <button id="save-button">Save</button>
-        <button id="cancel-button">Cancel</button>
-    </div>
-
     
+    
+    <!-- New tasks added here -->
+        <div id="content">
+            <ul id="log-list" data-role="listview" data-divider-theme="b" data-filter="true" data-filter-placeholder="Filter Tasks" data-input="#myFilter"></ul>
+            <ul id="task-list" data-role="listview" data-divider-theme="b" data-filter="true" data-filter-placeholder="Filter Tasks" data-input="#myFilter"></ul>
+            
+        </div>
+    <!-- list Filter -->
+    <form class="ui-filterable">
+        <input id="myFilter" data-type="search">
+    </form>
+
+        
+
+
+
 </body>
 </html>
