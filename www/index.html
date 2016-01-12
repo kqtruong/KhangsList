@@ -36,33 +36,21 @@
 
         <!-- Fixed bottom navbar-->
         <nav class="navbar navbar-default navbar-fixed-bottom">
+            <button class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-top ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="new-task-button">New Task</button>
+            <button class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="save-button">Save</button>
+            <button class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-top ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="cancel-button">Cancel</button>
+            <button class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-top ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="delete-all-button" style="background-color: #ff0000;">Delete All</button>
+
             <div class="container-fluid">
-                <div class="navbar-header">
+               
+            <div class="navbar-header">
                    
                     <a class="navbar-brand" id="brandBlink" href="#">
                         <img alt="VRaPP" style="max-height: 30px;" src="images/WTH1200X210.png" class="img-responsive center-block" />
                     </a>
                 </div>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input class="form-control" type="text"
-                                   id="searchTerm" placeholder="Search">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default form-control" type="button">
-                                    Go!
-                                </button>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-                <div class="container">
-                    <button class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="new-task-button">New Task</button>
-                    
-                    <button class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="save-button">Save</button>
-                    <button class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="cancel-button">Cancel</button>
-                    <button class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" id="delete-all-button">Delete All</button>
-                </div>
+               
+
             </div><!-- /.container-fluid -->
         </nav> <!-- end bottom nav-->
        
@@ -80,7 +68,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div>
+                   </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="topNavbar">
@@ -106,17 +94,11 @@
     
     <!-- New tasks added here -->
         <div id="content">
-            <ul id="log-list" data-role="listview" data-divider-theme="b" data-filter="true" data-filter-placeholder="Filter Tasks" data-input="#myFilter"></ul>
-            <ul id="task-list" data-role="listview" data-divider-theme="b" data-filter="true" data-filter-placeholder="Filter Tasks" data-input="#myFilter"></ul>
-            
+            <ul id="log-list" data-role="listview" data-divider-theme="b" data-filter="true" data-filter-placeholder="Filter Tasks" ></ul>
+            <ul id="task-list" data-role="listview" data-divider-theme="b"></ul>   
         </div>
-    <!-- list Filter -->
-    <form class="ui-filterable">
-        <input id="myFilter" data-type="search">
-    </form>
-
-        
-
+    
+    
 
 
 </body>

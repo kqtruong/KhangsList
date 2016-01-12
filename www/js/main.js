@@ -1,6 +1,6 @@
 /* create DOM task elements */
 
-var taskTemplate = '<li class="task"><input class="complete" type="checkbox" /> <input class="description" type="text" style="background-color: #2f3646;" placeholder="Enter task description..." /> <button class="delete-button ui-icon-delete" style="background-color: red;"><span class="description"></span></button></li>';
+var taskTemplate = '<li class="task"> <input class="complete" type="checkbox" /><input class="description" type="text" placeholder="Enter task description..." style="background-color: #2f3646;"/><a class="delete-button"><button class="ui-btn ui-btn-inline ui-icon-alert ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon ui-alt-icon" type="button" style="background-color: #ff0000;"></button></a></li>';
 
 function renderTasks(tasks) {
     var elementArray = $.map(tasks, _renderTask);
